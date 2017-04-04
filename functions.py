@@ -16,7 +16,7 @@ time=arange(0,finalTime, 0.01)
 
 
 # mdh function - leet code problem
-class Solution(object):
+class MDH(object):
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
