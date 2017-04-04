@@ -37,6 +37,29 @@ init=array([0.95,0.05,0.0])
 finalTime=20.0
 time=arange(0,finalTime, 0.01)
 
+
+# mdh function - leet code problem
+class MDH(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        indices = []
+        for i in xrange(len(nums)):
+            if (i != len(nums)+1) and (len(indices) !=2):
+                #print i, len(nums),len(indices)
+                for j in xrange(len(nums[i+1:])):
+                    #print i,j,i+j,nums[i],nums[j],nums[i+j]
+                    if nums[i+j+1] + nums[i] == target:
+                        indices = [i,i+j+1]
+                        break
+        return indices
+
+
+
+
 def derv(x,t):
     """Computes the derv operator for the basic sir model"""
 
