@@ -15,7 +15,7 @@ finalTime=20.0
 time=arange(0,finalTime, 0.01)
 
 
-# mdh function
+# mdh function - leet code problem
 class Solution(object):
     def twoSum(self, nums, target):
         """
