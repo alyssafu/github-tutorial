@@ -46,9 +46,9 @@ def derv(x,t):
     return(y)
 
 
-r=odeint(derv, init, time)
+population_sizes=odeint(derv, init, time)
 
-plot(time, r[:,0], "r", time, r[:,1], "g", time, r[:,2], "b")
+plot(time, population_sizes[:,0], "r", time, population_sizes[:,1], "g", time, population_sizes[:,2], "b")
 legend(("Susceptible","Infected","Recovered"), loc=0)
 ylabel("Number of People")
 xlabel("Time")
